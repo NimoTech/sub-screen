@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+systemctl stop nimoos-subscreen.service || true
+systemctl disable nimoos-subscreen.service || true
+
+rm -f /usr/lib/systemd/system-sleep/nimoos-subscreen
+
+exit 0

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+install -m 755 /usr/share/nimoos-subscreen/nimoos-subscreen-sleep /usr/lib/systemd/system-sleep/nimoos-subscreen
+
+systemctl daemon-reload
+systemctl enable nimoos-subscreen.service
+systemctl start nimoos-subscreen.service
+
+exit 0

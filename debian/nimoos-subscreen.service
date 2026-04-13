@@ -1,0 +1,11 @@
+[Unit]
+Description=NimoOS Subscreen Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/nimoos-subscreen
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
